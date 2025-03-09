@@ -1,0 +1,171 @@
+/* Theme & Global Styles */
+:root {
+  --background: #222222;      /* Dark background */
+  --primary-text: #eeeeee;    /* Off-white for body text */
+  --accent: #4ECDC4;          /* Teal for highlights (charts, headings) */
+  --secondary: #FFD166;       /* Gold/yellow for accents (bullets, arrows) */
+  --alert: #FF6B6B;           /* Coral red for warnings/emphasis */
+  --image-border: #444444;    /* Subtle border for visuals */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--primary-text);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Rainbow Borders */
+.slide {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  position: relative;
+  background: var(--background);
+  color: var(--primary-text);
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 8px solid;
+  border-image: linear-gradient(90deg, 
+    #983E82, #E2A458, #F5DC70, #59935B, #467AAC, #61589C) 1;
+}
+
+/* Headings & Text */
+.heading {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 20px;
+}
+
+.subheading {
+  font-size: 28px;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.body-text {
+  font-size: 24px;
+  color: var(--primary-text);
+  margin: 15px 0;
+}
+
+.caption {
+  font-size: 18px;
+  color: #888888;
+  font-style: italic;
+}
+
+/* Image Styling */
+.image-container {
+  border: 2px solid var(--image-border);
+  border-radius: 8px;
+  padding: 10px;
+  background: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Graph Styling */
+.chart-line { stroke: var(--accent); }
+.chart-bar { fill: var(--secondary); }
+
+/* Custom Lists */
+.list-item {
+  color: var(--primary-text);
+  margin: 10px 0;
+}
+
+.bullet::before {
+  content: "•";
+  color: var(--secondary);
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.numbered-list {
+  counter-reset: list;
+}
+
+.numbered-item::before {
+  counter-increment: list;
+  content: counter(list) ". ";
+  color: var(--accent);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  width: 100%;
+}
+
+th {
+  background: #333333;
+  color: var(--accent);
+  padding: 12px;
+}
+
+td {
+  background: #2a2a2a;
+  color: var(--primary-text);
+  padding: 10px;
+  border: 1px solid var(--image-border);
+}
+
+/* Blockquotes */
+.blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 20px;
+  margin: 20px 0;
+  color: #cccccc;
+  font-style: italic;
+}
+
+/* Code Block Styling */
+.plotcode {
+  font-size: 0.9em;
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 6px;
+  color: #f8f8f2;
+  font-family: "Courier New", monospace;
+}
+
+/* Checklist with Custom Icons */
+ul.checklist {
+  list-style: none;
+  padding-left: 20px;
+}
+
+ul.checklist li {
+  position: relative;
+  padding-left: 30px;
+}
+
+ul.checklist li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+/* ⚡ Fix for Long Code Blocks */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0;
+  font-weight: bold;
+  text-align: left;
+  color: var(--primary-text);
+}
+
+
