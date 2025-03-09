@@ -2,8 +2,8 @@
 :root {
   --background: #222222;      /* Dark background */
   --primary-text: #eeeeee;    /* Off-white for body text */
-  --accent: #4ECDC4;          /* Teal for highlights (charts, headings) */
-  --secondary: #FFD166;       /* Gold/yellow for accents (bullets, arrows) */
+  --accent: #4ECDC4;          /* Teal for highlights */
+  --secondary: #FFD166;       /* Gold/yellow for accents */
   --alert: #FF6B6B;           /* Coral red for warnings/emphasis */
   --image-border: #444444;    /* Subtle border for visuals */
 }
@@ -155,7 +155,7 @@ ul.checklist li::before {
   font-weight: bold;
 }
 
-/* ⚡ Fix for Long Code Blocks */
+/* Fix for Long Code Blocks */
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
